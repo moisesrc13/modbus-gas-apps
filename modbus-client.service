@@ -1,0 +1,14 @@
+[Unit]
+Description=Modbus gas dispenser client
+DefaultDependencies=no
+
+[Service]
+Type=simple
+User=debian
+Group=gpio
+ExecStart=/home/debian/git/modbus-gas-apps/startup.sh
+TimeoutStartSec=0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target
